@@ -6,7 +6,7 @@
 
 ### 🖼️ Screenshot
 
-*Adicione aqui um screenshot da sua aplicação em funcionamento!*
+![alt text](image.png)
 
 ---
 
@@ -54,9 +54,9 @@ Este projeto está em constante desenvolvimento! Aqui estão algumas das melhori
 
 ---
 
-## 👨‍💻 Desenvolvido por
+## 👨‍💻 Developed by
 
-Feito com ❤️ por **João Pedro Oliveira**.
+Developed by **João Pedro Oliveira**.
 
 [!GitHub](https://github.com/jpedrooliveira-dl)
 
