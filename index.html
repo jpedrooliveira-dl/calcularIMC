@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular IMC</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="web icon" type="png" href="./img/Sem título (1).png">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="title">
+                <h1>Calcular IMC</h1>
+            </div>
+            <div class="input">
+                <label>Nome: (ex.: Maria)</label>
+                <input type="text" id="nome">
+            </div>
+
+            <div class="input">
+                <label>Altura: (ex.: 1.70)</label> 
+                <input type="number" placeholder="Metros" id="altura">
+            </div>
+
+            <div class="input">
+                <label>Peso: (ex.: 70)</label>
+                <input type="number" placeholder="Quilos" id="peso">
+            </div>
+
+            <button id="calcular" class="botao">Calcular</button>
+
+            <div class="sobreImc">
+                Duvida sobre o IMC? 🤔 <a href="./pages/sobre.html" target="_blank">Sobre o IMC</a>
+            </div>
+
+            <div id="resultado" class="resultado">
+                <p class="resultadoPrevio">Seu IMC ira aparecer aqui</p>
+            </div>
+
+            <div class="tabelaImc">
+                <h2>Classificação do IMC</h2>
+                <table class="imc-table">
+                    <thead>
+                        <tr>
+                            <th>IMC (kg/m²)</th>
+                            <th>Classificação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="imc-range">16</td>
+                            <td class="classification underweight">Magreza grau III</td>
+                        </tr>
+                        <tr>
+                            <td class="imc-range">16 a 16,9</td>
+                            <td class="classification underweight">Magreza grau II</td>
+                        </tr>
+                        <tr>
+                            <td class="imc-range">17 a 18,4</td>
+                            <td class="classification underweight">Magreza grau I</td>
+                        </tr>
+                        <tr>
+                            <td class="imc-range">18,5 a 24,9</td>
+                            <td class="classification normal">Eutrofia</td>
+                        </tr>
+                        <tr>
+                            <td class="imc-range">25 a 29,9</td>
+                            <td class="classification overweight">Pré-obesidade</td>
+                        </tr>
+                        <tr>
+                            <td class="imc-range">30 a 34,9</td>
+                            <td class="classification obese-1">Obesidade moderada (grau I)</td>
+                        </tr>
+                        <tr>
+                            <td class="imc-range">35 a 39,9</td>
+                            <td class="classification obese-2">Obesidade severa (grau II)</td>
+                        </tr>
+                        <tr>
+                            <td class="imc-range">> 40</td>
+                            <td class="classification obese-3">Obesidade muito severa (grau III)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+        </div>
+    </main>
+    <footer>
+        <div class="rodaPe">
+            <p>Saiba mais sobre o <a href="./pages/sobre.html" target="_blank">IMC</a></p>
+            <p class="direitos">2025 IMCFacil© Todos os direitos reservados</p>
+            <p>Desenvolvido por <a href="https://github.com/jpedrooliveira-dl" target="_blank">João Pedro</a></p>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+
+</html>

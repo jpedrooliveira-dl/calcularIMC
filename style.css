@@ -1,0 +1,257 @@
+
+/* Reset e Layout Principal (Sticky Footer com Flexbox) */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0; /* Remove margens padrão, corrigindo as bordas brancas */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body ocupe a altura total da tela */
+    font-family: Arial, sans-serif; /* Define uma fonte base para toda a página */
+}
+
+:root {
+    --background : #073972;
+    --white: #FFFFFF;
+    --colorRodaPe: #CCC;
+}
+
+main {
+    /* Faz o conteúdo principal crescer e empurrar o rodapé para o final da página */
+    flex-grow: 1;
+    display: flex; /* Adicionado para centralizar o container */
+    justify-content: center; /* Adicionado para centralizar o container */
+    align-items: flex-start; /* Alinha os itens no topo */
+    padding: 20px 0; /* Espaçamento vertical */
+}
+
+/* Estilização do Container Principal da Calculadora */
+.container {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+.title h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Estilização dos campos de entrada (input) */
+.input {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input label {
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input input {
+    padding: 12px;
+    border: 1px solid var(--colorRodaPe);
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input input:focus {
+    outline: none;
+    border-color: var(--background);
+    box-shadow: 0 0 8px rgba(7, 57, 114, 0.2);
+}
+
+/* Remove as setas do input[type=number] para um visual mais limpo */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+
+/* Estilizacao da tabela IMC */
+.tabelaImc {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tabelaImc h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.tabelaImc .imc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tabelaImc .imc-table th {
+    background-color: var(--background);
+    color: var(--white);
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.tabelaImc .imc-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.tabelaImc .imc-table tr:nth-child(even) td {
+    background-color: #f1f1f1;
+}
+
+.tabelaImc .imc-table tr:hover td {
+    background-color: #e8f4f8;
+}
+
+.tabelaImc .imc-range {
+    font-weight: bold;
+    color: #333;
+}
+
+.tabelaImc .classification {
+    color: #555;
+}
+
+/* Cores específicas para diferentes classificações */
+.tabelaImc .underweight { color: #3498db; }
+.tabelaImc .normal { color: #27ae60; }
+.tabelaImc .overweight { color: #f39c12; }
+.tabelaImc .obese-1 { color: #e74c3c; }
+.tabelaImc .obese-2 { color: #c0392b; }
+.tabelaImc .obese-3 { color: #8e44ad; }
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .tabelaImc {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .tabelaImc .imc-table th,
+    .tabelaImc .imc-table td {
+        padding: 8px;
+        font-size: 14px;
+    }    
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    .title h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Estilização do Botão */
+.botao {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--background);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #052a53; /* Tom de azul mais escuro */
+}
+
+.resultado {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #e8f4f8; /* Azul bem claro para destaque suave */
+    border-left: 5px solid var(--background);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilização do Rodapé */
+.rodaPe {
+    background-color: var(--background);
+    color: var(--colorRodaPe);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px; /* Adiciona um espaço generoso acima do rodapé */
+}
+
+.rodaPe a {
+    color: #e0e0e0; /* Cinza claro para contraste suave */
+    text-decoration: none;
+    font-style: italic;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.rodaPe a:hover {
+    color: #06b6d4;
+    text-decoration: underline;
+}
+
+/* Estilização da mensagem previa no resultado */
+
+.resultadoPrevio {
+    color: #a8a8a8;
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.sobreImc {
+    color: #a8a8a8;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.sobreImc a {
+    color: var(--background);
+    text-decoration: none;
+}
+
+.sobreImc a:hover {
+    color: #1059ad;
+}
+
+.direitos {
+    font-style: italic;
+    
+}
