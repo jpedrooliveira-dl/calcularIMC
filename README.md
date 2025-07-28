@@ -6,7 +6,7 @@
 
 ### 🖼️ Screenshot
 
-![alt text](image.png)
+![Screenshot da Calculadora de IMC](./img/image.png)
 
 ---
 
